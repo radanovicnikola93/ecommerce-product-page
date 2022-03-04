@@ -99,6 +99,12 @@ nav {
 
 .nav__user img {
     width: 50px;
+    cursor: pointer;
+}
+
+.nav__user img:hover {
+    outline: 1px solid var(--orange);
+    border-radius: 50%;
 }
 
 @media (max-width: 920px) {
