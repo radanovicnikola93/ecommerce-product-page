@@ -70,6 +70,10 @@ nav {
     text-decoration: none;
 }
 
+.page-links__close-menu {
+    display: none;
+}
+
 /* RIGHT CONTAINER */
 .nav__right-container {
     flex-basis: 20%;
@@ -87,3 +91,5 @@ nav {
 .nav__user img {
     width: 50px;
 }
+
+
