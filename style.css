@@ -346,7 +346,7 @@ main {
     }
 
     .main__main-image {
-        cursor: none;
+        cursor: default;
     }
 
     .main__main-image img {
