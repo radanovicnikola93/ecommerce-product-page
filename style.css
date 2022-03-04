@@ -99,6 +99,7 @@ nav {
     }
     .nav__hamburger {
         display: block;
+        cursor: pointer;
     }
 
     .nav__page-links {
@@ -117,6 +118,7 @@ nav {
     }
 
     .nav__page-links.active-mobile {
+        z-index: 999;
         left: 0;
         animation: mobile-open 500ms ease;
     }
