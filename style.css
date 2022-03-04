@@ -200,6 +200,10 @@ main {
     border-radius: 1rem;
 }
 
+.img-cursor {
+    display: none;
+}
+
 .main__gallery-images {
     display: flex;
     justify-content: space-between;
@@ -347,10 +351,38 @@ main {
 
     .main__main-image {
         cursor: default;
+        position: relative;
     }
 
     .main__main-image img {
         border-radius: 0;
+    }
+
+    .img-cursor {
+        cursor: pointer;
+        display: block;
+        border-radius: 50%;
+        background-color: var(--white);
+        border: none;
+        padding: 0.8rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-cursor-previous {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+    }
+
+    .img-cursor-next {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
     }
 
     .main__gallery-images {
