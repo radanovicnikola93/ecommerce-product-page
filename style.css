@@ -96,7 +96,7 @@ nav {
     /* LEFT CONTAINER */
     nav {
         position: relative;
-        padding: 3rem 1rem;
+        padding: 3rem 2rem;
     }
     .nav__left-container {
         flex-basis: 50%;
