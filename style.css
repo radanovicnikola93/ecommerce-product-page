@@ -112,7 +112,7 @@ nav {
 /* CART TOGGLER */
 
 
-.nav__cart--toggler {
+.nav__cart--container {
     position: absolute;
     top: -1000px;
     right: 0;
@@ -137,7 +137,7 @@ nav {
     }
 }
 
-.nav__cart--toggler.active-cart {
+.nav__cart--container.active-cart {
     top: 100%;
 }
 
