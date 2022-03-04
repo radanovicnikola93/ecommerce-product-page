@@ -86,7 +86,7 @@ nav {
     width: 50px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 920px) {
     /* LEFT CONTAINER */
     nav {
         position: relative;
@@ -328,7 +328,7 @@ main {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 920px) {
     main {
         padding: 0;
         grid-template-areas: 'images'
