@@ -170,3 +170,32 @@ nav {
         width: 30px;
     }
 }
+
+
+/* MAIN */
+main {
+    padding: 6rem;
+    display: grid;
+    grid-template-areas: 'images product';
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+/* Left container */
+.main__left-container {
+    grid-area: 'images';
+}
+
+.main__main-image img {
+    width: 100%;
+}
+
+/* Right container */
+.main__right-container {
+    grid-area: 'product';
+}
+
+
+
+
