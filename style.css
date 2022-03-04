@@ -76,9 +76,9 @@ nav {
 
 /* RIGHT CONTAINER */
 .nav__right-container {
-    flex-basis: 20%;
+    flex-basis: 10%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
