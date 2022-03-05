@@ -111,7 +111,6 @@ nav {
 
 /* CART TOGGLER */
 
-
 .nav__cart--container {
     position: absolute;
     top: -1000px;
@@ -124,7 +123,7 @@ nav {
 
     box-shadow: 5px 10px 18px #888888;
 
-    animation: open-cart 300ms ease-in-out;
+    animation: open-cart 1s ease-in-out;
 }
 
 @keyframes open-cart {
@@ -243,12 +242,11 @@ nav {
     }
 }
 
-
 /* MAIN */
 main {
     padding: 6rem;
     display: grid;
-    grid-template-areas: 'images product';
+    grid-template-areas: "images product";
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     gap: 1rem;
@@ -256,7 +254,7 @@ main {
 
 /* Left container */
 .main__left-container {
-    grid-area: 'images';
+    grid-area: "images";
     display: flex;
     flex-direction: column;
 
@@ -305,7 +303,7 @@ main {
 
 /* Right container */
 .main__right-container {
-    grid-area: 'product';
+    grid-area: "product";
 
     padding: 3rem;
 
@@ -351,7 +349,7 @@ main {
 
 .current-price__discount {
     padding: 0.3rem;
-    background-color: hsla(56, 100%, 50%, .4);
+    background-color: hsla(56, 100%, 50%, 0.4);
 }
 
 .current-price__discount p {
@@ -422,15 +420,15 @@ main {
 
 .cart__add-product button img {
     /* convert img color to white */
-    filter: brightness(0) invert(1); 
+    filter: brightness(0) invert(1);
 }
-
 
 @media (max-width: 920px) {
     main {
         padding: 0;
-        grid-template-areas: 'images'
-        'product';
+        grid-template-areas:
+            "images"
+            "product";
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 1fr);
         gap: 0;
@@ -506,5 +504,97 @@ main {
 
     .cart__add-product {
         width: 100%;
+    }
+}
+
+/* MODAL */
+.modal-images {
+    display: none;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    animation: modalshow 1s ease;
+}
+
+@keyframes modalshow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+.modal-images.modal-active {
+    display: block;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.modal__main-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.modal__main-image .img-cursor {
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: none;
+    padding: 0.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__main-image .img-cursor-previous {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-150%);
+}
+
+.modal__main-image .img-cursor-next {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-150%);
+}
+
+/* .modal__gallery-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+} */
+
+@media (max-width: 920px) {
+    .modal-images.modal-active {
+        display: none;
     }
 }
