@@ -1,6 +1,11 @@
 // CART CONTAINER
 const cartIcon = document.getElementById('nav-cart-toggler');
 const cartContainer = document.getElementById('nav-cart-container');
+const cartAddedQuantity = document.getElementById("product-quantity-value");
+const cartTotalPrice = document.getElementById("product-quantity-total-price");
+const cartEmptyBtn = document.getElementById("empty-cart");
+const emptyCartToggler = document.getElementById("cart-empty-toggler");
+const filledCartToggler = document.getElementById("cart-filled-toggler");
 
 // ADD TO CART CONTAINER 
 const decreaseQnt = document.getElementById("quantity__decrease");
@@ -34,11 +39,19 @@ increaseQnt.addEventListener("click", () => {
 });
 
 
-
 addToCartBtn.addEventListener("click", () => {
     if (currentQnt > 0) {
-        console.log(currentQnt);
+        emptyCartToggler.style.display = "none";
+        filledCartToggler.style.display = "block";
+        cartAddedQuantity.textContent = currentQnt;
+        cartTotalPrice.textContent = currentQnt * 125;
     } else {
         alert("Quantity cannot be 0.")
     }
 });
+
+
+cartEmptyBtn.addEventListener("click", () => {
+    emptyCartToggler.style.display = "block";
+    filledCartToggler.style.display = "none";
+})

@@ -64,10 +64,13 @@
                 <div class="cart--header">
                     <h4>Cart</h4>
                 </div>
-                <!-- <div class="cart__empty" id="cart-empty">
-                    <p>Your cart is empty</p>
-                </div> -->
-                <div class="cart__filled" id="cart-filled">
+                <div class="cart__empty-toggler" id="cart-empty-toggler">
+                    <div class="cart__empty">
+                        <p>Your cart is empty</p>
+                    </div>
+                </div>
+                <div class="cart__filled-toggler" id="cart-filled-toggler">
+                    <div class="cart__filled">
                     <div class="cart__filled--content">
                         <div class="cart__filled--content-img">
                             <img
@@ -92,7 +95,7 @@
                             </div>
                         </div>
                         <div class="cart__filled--content-delete">
-                            <button>
+                            <button id="empty-cart">
                                 <img
                                     src="./images/icon-delete.svg"
                                     alt="empty cart"
@@ -104,6 +107,7 @@
                     <div class="cart__filed--checkout">
                         <button id="cart-checkout">Checkout</button>
                     </div>
+                </div>
                 </div>
             </div>
         </nav>

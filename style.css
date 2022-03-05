@@ -148,6 +148,12 @@ nav {
     font-family: 400;
 }
 
+.cart__empty-toggler {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
 .cart__empty {
     display: flex;
     justify-content: center;
@@ -159,6 +165,12 @@ nav {
 .cart__empty p {
     color: var(--dark-grayish-blue);
     font-weight: 700;
+}
+
+.cart__filled-toggler {
+    display: none;
+    height: 100%;
+    width: 100%;
 }
 
 .cart__filled {
