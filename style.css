@@ -576,14 +576,14 @@ main {
     position: absolute;
     top: 50%;
     left: 1rem;
-    transform: translateY(-150%);
+    transform: translateY(-50%);
 }
 
 .modal__main-image .img-cursor-next {
     position: absolute;
     top: 50%;
     right: 1rem;
-    transform: translateY(-150%);
+    transform: translateY(-50%);
 }
 
 /* .modal__gallery-images {
