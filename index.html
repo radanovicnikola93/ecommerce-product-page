@@ -57,12 +57,53 @@
                 </div>
             </div>
 
-            <div class="nav__cart--container" id="nav-cart-container">
+            <div
+                class="nav__cart--container active-cart"
+                id="nav-cart-container"
+            >
                 <div class="cart--header">
                     <h4>Cart</h4>
                 </div>
-                <div class="cart__empty" id="cart-empty">
+                <!-- <div class="cart__empty" id="cart-empty">
                     <p>Your cart is empty</p>
+                </div> -->
+                <div class="cart__filled" id="cart-filled">
+                    <div class="cart__filled--content">
+                        <div class="cart__filled--content-img">
+                            <img
+                                src="./images/image-product-1-thumbnail.jpg"
+                                alt="product"
+                            />
+                        </div>
+                        <div class="cart__filled--content-description">
+                            <div class="content-description--product-title">
+                                <p>Fall Limited Edition Sneakers</p>
+                            </div>
+                            <div class="content-description--product-quantity">
+                                <p>
+                                    $125.00 x
+                                    <span id="product-quantity-value">1</span>
+                                </p>
+                                <p>
+                                    $<span id="product-quantity-total-price"
+                                        >125</span
+                                    >
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cart__filled--content-delete">
+                            <button>
+                                <img
+                                    src="./images/icon-delete.svg"
+                                    alt="empty cart"
+                                />
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="cart__filed--checkout">
+                        <button id="cart-checkout">Checkout</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -150,16 +191,19 @@
                 <!-- CART CONTAINER -->
                 <div class="main__cart">
                     <div class="cart__quantity">
-                        <div class="quantity__decrease">
+                        <div class="quantity__decrease" id="quantity__decrease">
                             <img
                                 src="./images/icon-minus.svg"
                                 alt="decrease quantity"
                             />
                         </div>
-                        <div class="quantity__current-quantity">
+                        <div
+                            class="quantity__current-quantity"
+                            id="current-quantity"
+                        >
                             <p>0</p>
                         </div>
-                        <div class="quantity__increase">
+                        <div class="quantity__increase" id="quantity__increase">
                             <img
                                 src="./images/icon-plus.svg"
                                 alt="increase quantity"
@@ -168,7 +212,7 @@
                     </div>
 
                     <div class="cart__add-product">
-                        <button>
+                        <button id="add-to-cart">
                             <img
                                 src="./images/icon-cart.svg"
                                 alt="add to cart"
@@ -225,5 +269,6 @@
         <script src="./scripts/navigation.js"></script>
         <script src="./scripts/cart.js"></script>
         <script src="./scripts/modal.js"></script>
+        <script src="./scripts/quantity.js"></script>
     </body>
 </html>
