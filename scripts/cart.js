@@ -7,6 +7,5 @@ cartIcon.addEventListener('click', () => {
     cartContainer.classList.toggle('active-cart')
 })
 
-main.addEventListener('click', () => {
-    cartContainer.classList.remove('active-cart')
-})
+// close cart on click outside of cart
+// window.addEventListener('click', e => e.target === cartContainer ? cartContainer.classList.remove('active-cart') : false)
