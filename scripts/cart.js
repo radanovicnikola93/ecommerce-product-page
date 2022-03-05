@@ -13,6 +13,8 @@ const increaseQnt = document.getElementById("quantity__increase");
 const quantity = document.getElementById("current-quantity");
 const addToCartBtn = document.getElementById('add-to-cart');
 
+const main = document.getElementById('main')
+
 // CART CONTAINER
 
 cartIcon.addEventListener('click', () => {
@@ -20,11 +22,14 @@ cartIcon.addEventListener('click', () => {
 })
 
 // close cart on click outside of cart
-// window.addEventListener('click', e => e.target === cartContainer ? cartContainer.classList.remove('active-cart') : false)
+main.addEventListener('click', () => {
+    cartContainer.classList.remove('active-cart');
+})
 
 // ADD TO CART
 let currentQnt = 0;
 
+// increase quantity of product
 decreaseQnt.addEventListener("click", () => {
     currentQnt--;
     if (currentQnt < 0) {
@@ -33,16 +38,18 @@ decreaseQnt.addEventListener("click", () => {
     quantity.textContent = currentQnt;
 });
 
+// increase quantity of product
 increaseQnt.addEventListener("click", () => {
     currentQnt++;
     quantity.textContent = currentQnt;
 });
 
-
+// add product to cart
 addToCartBtn.addEventListener("click", () => {
     if (currentQnt > 0) {
         emptyCartToggler.style.display = "none";
         filledCartToggler.style.display = "block";
+        cartContainer.classList.add("active-cart")
         cartAddedQuantity.textContent = currentQnt;
         cartTotalPrice.textContent = currentQnt * 125;
     } else {
@@ -50,7 +57,7 @@ addToCartBtn.addEventListener("click", () => {
     }
 });
 
-
+// empty cart from products
 cartEmptyBtn.addEventListener("click", () => {
     emptyCartToggler.style.display = "block";
     filledCartToggler.style.display = "none";
